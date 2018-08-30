@@ -1,20 +1,39 @@
 /**
  * Bean that represents the user in the repository
  */
-package com.sai.poc.webapp.repository;
+package com.sai.poc.webapp.domain;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "users")
-public class User {
+@Entity(name = "test_user")
+public class User implements Serializable {
+    private static final long serialVersionUID = 934038610149319103L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @Column
     private String name;
+
+    @Column
     private String userName;
+
+    public User() {
+
+    }
+
+    public User(int id, String name, String userName) {
+	this.id = id;
+	this.name = name;
+	this.userName = userName;
+    }
 
     public int getId() {
 	return id;

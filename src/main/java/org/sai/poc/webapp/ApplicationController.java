@@ -1,20 +1,24 @@
 package org.sai.poc.webapp;
 
-import javax.inject.Inject;
+import javax.sql.DataSource;
 
 import org.sai.poc.webapp.config.ApplicationConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sai.poc.webapp.repository.User;
+import com.sai.poc.webapp.domain.User;
 import com.sai.poc.webapp.repository.UserRepository;
 
 @RestController
 public class ApplicationController {
-    @Inject
+    @Autowired
     private ApplicationConfig config;
 
-    @Inject
+    @Autowired
+    DataSource dataSource;
+
+    @Autowired
     private UserRepository userRepository;
 
     @RequestMapping("/")

@@ -3,11 +3,10 @@
  */
 package org.sai.poc.webapp.config;
 
-import javax.inject.Named;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
-@Named
+@Component
 @ConfigurationProperties(prefix = "webapp.database")
 public class ApplicationConfig {
     String url;
