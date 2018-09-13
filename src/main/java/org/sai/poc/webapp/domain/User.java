@@ -1,7 +1,7 @@
 /**
  * Bean that represents the user in the repository
  */
-package com.sai.poc.webapp.domain;
+package org.sai.poc.webapp.domain;
 
 import java.io.Serializable;
 

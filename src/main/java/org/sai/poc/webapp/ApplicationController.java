@@ -3,12 +3,11 @@ package org.sai.poc.webapp;
 import javax.sql.DataSource;
 
 import org.sai.poc.webapp.config.ApplicationConfig;
+import org.sai.poc.webapp.domain.User;
+import org.sai.poc.webapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.sai.poc.webapp.domain.User;
-import com.sai.poc.webapp.repository.UserRepository;
 
 @RestController
 public class ApplicationController {
